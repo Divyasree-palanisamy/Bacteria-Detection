@@ -128,7 +128,7 @@ def preprocess_image(image):
     return binary_image
 
 # Function to count bacteria in the image
-def count_bacteria(image):
+def count_bacteria(image): 
     binary_image = preprocess_image(image)
     contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     bacteria_count = len(contours)
@@ -141,7 +141,7 @@ page = st.sidebar.radio("Go to", ["Home", "Prediction", "About the Project", "Fe
 # --- Home Section ---
 if page == "Home":
     
-    st.title("🦠 Welcome to the Bacteria Detection Project")
+    st.title("🦠 Welcome to the Bacteria Detection Website")
     st.markdown(""" 
         Welcome to the Bacteria Detection Project! We design this tool to aid researchers, students, and educators by providing an efficient way to identify different bacteria types through image analysis. By uploading an image of a bacterial sample, our model can classify and provide  the insights about  detected bacteria type, and also the  essential recommendations based on the bacteria count.
 
